@@ -30,3 +30,31 @@ int ReadNumber()
     check = false;
     return number;
 }
+
+/// <summary>
+/// Метод заполняем массив текстом введёный с 
+/// клавиатуры пользователем
+/// </summary>
+/// <param name="array">Массив строк</param>
+/// <param name="size">Размер массива</param>
+/// <returns>Возврощяет заполненый массив</returns>
+string[] CompletionArray(string[] array, int size)
+{
+    string[] arrayGet = new string[size];
+    int count = 0;
+    while (count != size)
+    {
+        Console.WriteLine($"Введите {count + 1} строку");
+        string text = Console.ReadLine();
+        if (String.IsNullOrWhiteSpace(text))
+        {
+            Console.WriteLine("Строка не может быть пустой");
+        }
+        else
+        {
+            arrayGet[count] = text;
+            count++;
+        }
+    }
+    return arrayGet;
+}
