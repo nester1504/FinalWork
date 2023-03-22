@@ -81,3 +81,16 @@ string[] ArrayThreeChar(string[] array, int size)
     }
     return arrayFinal;
 }
+
+/// <summary>
+/// Метод печатает одномерный массив
+/// состоящий из строк
+/// </summary>
+/// <param name="arr">Массив строк</param>
+void WriteArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"[{arr[i]}] ");
+    }
+}
