@@ -58,3 +58,26 @@ string[] CompletionArray(string[] array, int size)
     }
     return arrayGet;
 }
+
+/// <summary>
+/// Метод находит в массиве строки состоящие из трёх или менее символов
+/// и записывает их в новый масиив
+/// </summary>
+/// <param name="array">Массив строк</param>
+/// <param name="size">Длина массива</param>
+/// <returns>Возврощяет новый массив состоящий из трёх или менее символов</returns>
+string[] ArrayThreeChar(string[] array, int size)
+{
+    int sizeCount = 1;
+    string[] arrayFinal = new string[sizeCount];
+    for (int i = 0; i < size; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            Array.Resize(ref arrayFinal, sizeCount);
+            arrayFinal[sizeCount - 1] = array[i];
+            sizeCount++;
+        }
+    }
+    return arrayFinal;
+}
