@@ -94,3 +94,12 @@ void WriteArray(string[] arr)
         Console.Write($"[{arr[i]}] ");
     }
 }
+
+Console.WriteLine("Введите длину массива");
+int sizeArray = ReadNumber();
+string[] array = new string[sizeArray];
+string[] arrayNew = CompletionArray(array, sizeArray);
+WriteArray(arrayNew);
+Console.WriteLine();
+string[] arrayFin = ArrayThreeChar(arrayNew, sizeArray);
+WriteArray(arrayFin);
